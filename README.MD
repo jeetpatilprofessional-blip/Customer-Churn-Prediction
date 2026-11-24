@@ -1,71 +1,63 @@
 # Customer Churn Prediction
 
-## Overview
-This project predicts whether a customer is likely to churn using Machine Learning. It includes data preprocessing, exploratory data analysis, model training, model evaluation, hyperparameter tuning, and a Streamlit web application for interactive predictions.
+An educational machine-learning project that predicts customer churn from the supplied customer dataset. It includes exploratory analysis, preprocessing, model training, a saved model and scaler, and a Streamlit prediction interface.
 
-## Technologies Used
+## Tech stack
 - Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+- Pandas, NumPy
+- Matplotlib, Seaborn
 - Scikit-learn
 - Streamlit
 - Joblib
 
-## Project Workflow
-- Data preprocessing and cleaning
-- Exploratory Data Analysis (EDA)
-- Feature encoding
-- Train-test split
-- Feature scaling using StandardScaler
-- Machine Learning model training
-- Model evaluation
-- Hyperparameter tuning using GridSearchCV
-- Model serialization using Joblib
-- Interactive prediction using Streamlit
+## Project workflow
+1. Explore the customer dataset in the notebook.
+2. Clean and prepare the data.
+3. Encode categorical features and scale numerical features.
+4. Train and evaluate classification models.
+5. Save the trained model and scaler.
+6. Load the saved artifacts in the Streamlit app for interactive predictions.
 
-## Machine Learning
-This project explores classification algorithms to predict customer churn and uses hyperparameter tuning to improve model selection.
+## Repository contents
+- `notebook.ipynb` — analysis and model-development notebook.
+- `customer_churn_data.csv` — dataset used by the project.
+- `app.py` — Streamlit interface.
+- `model.pkl` — saved model.
+- `scaler.pkl` — saved feature scaler.
+- `requirements.txt` — Python dependencies.
 
-## Streamlit Application
-The Streamlit application allows users to input customer information and receive a churn prediction.
+## Run locally
 
-## How to Run the Project
-
-### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/Customer-Churn-Prediction.git
-```
-
-### 2. Navigate to the project directory
-```bash
+git clone https://github.com/jeetpatilprofessional-blip/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
+python -m venv .venv
 ```
 
-### 3. Install dependencies
+Activate the environment:
+
+**Windows**
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux**
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies and launch the app:
+
 ```bash
 pip install -r requirements.txt
-```
-
-### 4. Run the application
-```bash
 streamlit run app.py
 ```
 
-## Project Structure
-```text
-Customer-Churn-Prediction/
-│
-├── app.py
-├── notebook.ipynb
-├── customer_churn_data.csv
-├── model.pkl
-├── scaler.pkl
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
+## Important notes
+- Use the same feature order and preprocessing steps used during training when making predictions.
+- The model's predictions are educational estimates based on the supplied dataset, not guaranteed predictions of future customer behavior.
+- Re-run the notebook to verify evaluation metrics before quoting performance figures.
+- Only load trusted pickle files; pickle artifacts can execute code when loaded.
 
-## Purpose
-The objective of this project is to demonstrate an end-to-end Machine Learning workflow, including data analysis, model development, evaluation, and deployment through an interactive web application.
+## Author
+Jeet Patil
